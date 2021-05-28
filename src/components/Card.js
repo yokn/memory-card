@@ -1,7 +1,11 @@
 function Card(props) {
+  let id = props.char;
   return (
-    <div>
-      <p>Cardtext {props.char}</p>
+    <div className="card">
+      <img src={`/assets/images/${id}.svg`} alt="" className="cardImage" />
+      {
+        // <p className="cardText">{id}</p>
+      }
     </div>
   );
 }

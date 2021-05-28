@@ -1,0 +1,13 @@
+.App{
+  justify-content: center;
+  /* display: grid;
+  grid-template-rows: 15vh 15vh 15vh;
+  grid-template-columns: 15vw 15vw 15vw 15vw; */
+  display:flex;
+  flex-wrap: wrap;
+}
+
+.cardImage{
+  max-width: 31vw;
+  max-height: 31vh;
+}
