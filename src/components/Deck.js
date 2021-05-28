@@ -32,10 +32,9 @@ function Deck(props) {
     } else {
       console.log("in else");
       setClicked(clicked.push(senderID));
-      
-      console.log(score);
-      setScore(score + 1);
-      console.log(score);
+
+      // idk why I have to do this
+      setScore((score) => score + 1);
     }
   }
 
