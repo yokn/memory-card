@@ -50,6 +50,8 @@ function App() {
 
   return (
     <div className="App">
+      <div style={{position:"absolute", left:"90%"}}>Icons by <a href="https://www.flaticon.com/authors/flat-icons" title="Flat Icons">Flat Icons</a>
+      </div>
       <ScoreBar score={score} highscore={highscore} />
       <Deck cards={deck} onClick={onClickActions} />
     </div>
