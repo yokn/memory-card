@@ -9,7 +9,7 @@ function Card(props) {
     <div className="card" id={id} onClick={onClickCard}>
       <img src={`/assets/images/${id}.svg`} alt="" className="cardImage" />
       {
-         <p className="cardText">{id}</p>
+        // <p className="cardText">{id}</p>
       }
     </div>
   );
