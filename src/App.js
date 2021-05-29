@@ -6,6 +6,7 @@ import _ from "lodash";
 
 function App() {
   const [score, setScore] = useState(0);
+  const [highscore, setHighscore] = useState(0);
   const [clicked, setClicked] = useState([]);
   const [deck, setDeck] = useState([...Array(12)].map((e, i) => i));
 
@@ -31,13 +32,15 @@ function App() {
       console.log("in else");
       setClicked(clicked.concat(senderID));
 
-      setScore(score + 1);
+      const newScore = score + 1;
+      setScore(newScore);
+      if (newScore >= highscore) setHighscore(newScore);
     }
   }
 
   return (
     <div className="App">
-      <ScoreBar score={score} />
+      <ScoreBar score={score} highscore={highscore} />
       <Deck cards={deck} onClick={onClickActions} />
     </div>
   );
