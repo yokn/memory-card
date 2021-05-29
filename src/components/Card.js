@@ -1,14 +1,15 @@
-import { useState } from "react";
-
 function Card(props) {
-  const [clicked, setClicked] = useState(props.clicked);
+  let id = props.id;
 
-  let id = props.char;
+  function onClickCard(){
+    props.onClick(id)
+  }
+
   return (
-    <div className="card" id={id}>
+    <div className="card" id={id} onClick={onClickCard}>
       <img src={`/assets/images/${id}.svg`} alt="" className="cardImage" />
       {
-        // <p className="cardText">{id}</p>
+         <p className="cardText">{id}</p>
       }
     </div>
   );
